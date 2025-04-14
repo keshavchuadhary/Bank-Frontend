@@ -1,8 +1,11 @@
 import React from 'react'
+import SectionContainer from '../../component/SectionContainer'
 
 const Account = () => {
   return (
-    <div>Account</div>
+    <SectionContainer>
+      Account Page 
+    </SectionContainer>
   )
 }
 

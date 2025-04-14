@@ -5,6 +5,8 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import RegistrationSuccessful from "./pages/RegistrationSuccessful";
+import store from "./app/store";
+import { Provider } from "react-redux";
 
 function App() {
 
@@ -22,7 +24,7 @@ function App() {
     element: <Register />,
   },
   {
-    path: "/dashboard",
+    path: "/dashboard/*",
     element: <Dashboard/>,
   },
   {
@@ -32,7 +34,9 @@ function App() {
 ])
 
 return (
-  <RouterProvider router={routes}></RouterProvider>
+  <Provider store={store}>
+    <RouterProvider router={routes}></RouterProvider>
+  </Provider>
 
 )
 
